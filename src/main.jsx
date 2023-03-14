@@ -8,14 +8,17 @@ import { Counter } from './Challenge03_ Counter Subs&Reset/Counter'
 import { BreakingBad } from './Challenge08_BreakingBad/BreakingBad'
 import { GifGrid } from './Challenge05_GetGifs/GifGrid'
 //import {Father} from './Challenge9/Father'
+import {TodoApp} from './Challenge10_useReduce/TodoApp'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <FirstApp/>
     <SubsReset value={1}/>
     <Counter value={0}/>
     <GifExpertApp/>
+    <TodoApp/>
     <BreakingBad/>
     <GifGrid category={"Praise the sun"}/>
+    
     
   </React.StrictMode>,
 )
