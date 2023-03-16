@@ -12,6 +12,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  text-align: center;
 }
 
 a {
@@ -24,6 +25,7 @@ a:hover {
 }
 
 body {
+  text-align: center;
   margin: 0;
   display: flex;
   place-items: center;

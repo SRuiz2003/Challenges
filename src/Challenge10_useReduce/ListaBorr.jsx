@@ -1,7 +1,9 @@
+import useCounter from "../hooks/useCounter(Ch06)";
+
 export const ListaBorr = () => {
-    return(
-      <> 
-      <button onClick={increment}>Borrar</button>
-      </>
-    )
-}
+  return (
+    <>
+      <button>Borrar</button>
+    </>
+  );
+};
