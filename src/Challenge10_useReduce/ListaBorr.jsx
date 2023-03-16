@@ -1,7 +1,7 @@
 export const ListaBorr = () => {
     return(
       <> 
-      <button>Borrar</button>
+      <button onClick={increment}>Borrar</button>
       </>
     )
 }
