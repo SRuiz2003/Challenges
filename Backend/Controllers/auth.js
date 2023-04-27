@@ -1,6 +1,5 @@
 const express = require('express')
-const {validationResult} = require('express-validator')
-const {Usuario} = require('../models/Usuario')
+const Usuario = require('../models/Usuario')
 const {generarJWT} = require('../helpers/jwt')
 const bcrypt = require('bcryptjs/dist/bcrypt')
 const crearUsuario = async (req,res = express.response) => {
@@ -35,6 +34,8 @@ const crearUsuario = async (req,res = express.response) => {
 }
 
 const loginUsuario= async (req,res = express.response) => {
+    const {email,password} = req.body
+    
     let usuario = await Usuario.findOne({email:email})
 
     const token = await (generarJWT(usuario.id,usuario.name))
