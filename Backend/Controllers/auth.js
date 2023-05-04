@@ -19,7 +19,7 @@ const crearUsuario = async (req,res = express.response) => {
         usuario.password = bcrypt.hashSync(password,salt);
         await usuario.save();
 
-        res.status(200).json({
+        return res.status(200).json({
             ok:true,
             usuario
         })
@@ -47,6 +47,8 @@ const loginUsuario= async (req,res = express.response) => {
 }
 
 const revalidarToken= (req,res = express.response) => {
+    const {uid, name} = req
+    const token = await( generarJWT(uid,name) )
     res.json({
         ok:true,
         renew: "Done"
